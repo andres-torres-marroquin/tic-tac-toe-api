@@ -41,7 +41,7 @@ docker-compose run --rm django ./manage.py migrate --fake-initial
 
 # Notes for Ethyca
 Once completed, please create a README file describing:
-1. How to run your project (or where it is hosted): Hosted on https://github.com:andres-torres-marroquin/tic-tac-toe-api
+1. How to run your project (or where it is hosted): Hosted on https://github.com/andres-torres-marroquin/tic-tac-toe-api
 2. How much time you spent building the project: 2.5hrs
 3. Any assumptions you made:
   a. I assumed that we wanted to have an easily setuppable project, therefore I used Docker.
