@@ -1,0 +1,21 @@
+services:
+  postgres:
+    hostname: postgres_server
+    image: postgres:16.2
+    restart: always
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_USER=postgres_username
+      - POSTGRES_DB=postgres_database
+
+  django:
+    build: .
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/code:cached
+    depends_on:
+      - postgres
+    env_file:
+      - base.env
