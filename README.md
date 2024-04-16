@@ -36,5 +36,4 @@ docker-compose run --rm django ./manage.py makemigrations
 docker-compose run --rm django ./manage.py migrate
 docker-compose run --rm django ./manage.py migrate main 0001
 docker-compose run --rm django ./manage.py migrate --fake-initial
-docker-compose run --rm django ./manage.py import_legacy
 ```
