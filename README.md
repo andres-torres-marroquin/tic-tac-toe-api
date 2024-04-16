@@ -37,3 +37,16 @@ docker-compose run --rm django ./manage.py migrate
 docker-compose run --rm django ./manage.py migrate main 0001
 docker-compose run --rm django ./manage.py migrate --fake-initial
 ```
+
+
+# Notes for Ethyca
+Once completed, please create a README file describing:
+1. How to run your project (or where it is hosted): Hosted on https://github.com:andres-torres-marroquin/tic-tac-toe-api
+2. How much time you spent building the project: 2.5hrs
+3. Any assumptions you made:
+  a. I assumed that we wanted to have an easily setuppable project, therefore I used Docker.
+  b. I assumed we wanted to save it on a DB, therefore I used postgresql, no special DB required, also added default ordering so queries are easier to write.
+5. Any trade-offs you made: I think I didn't made any trade-offs.
+6. Any special/unique features you added: not added myself given that's part of Django Rest Framework, but the [Browsable API](https://www.django-rest-framework.org/topics/browsable-api/) is very helpful for understanding how the API behaves.
+7. Anything else you want us to know about: I added a test suite for an easy testing, but curl can be used for interacting with the API, also [Browsable API](https://www.django-rest-framework.org/topics/browsable-api/) is available.
+8. Any feedback you have on this technical challenge: Loved the challenge! I think it is very interesting way to have a good insight on the developer behind the code.
