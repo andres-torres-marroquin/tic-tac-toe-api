@@ -1,6 +1,6 @@
 # 0.1 Clone the repo
 ```bash
-git clone git@github.com:andres-torres-marroquin/tic-tac-toe.git
+git clone git@github.com:andres-torres-marroquin/tic-tac-toe-api.git
 ```
 
 # 0.5 Install pre-commit
