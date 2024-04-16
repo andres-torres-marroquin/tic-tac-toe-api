@@ -4,32 +4,8 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
+from main.serializers import GameSerializer, GameMoveSerializer
 from main.models import Game, GameMove
-
-
-class GameMoveSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = GameMove
-        fields = [
-            'id',
-            'game',
-            'board',
-            'updated_at',
-            'created_at',
-        ]
-
-
-class GameSerializer(serializers.ModelSerializer):
-    moves = GameMoveSerializer(many=True, required=False, read_only=True)
-    class Meta:
-        model = Game
-        fields = [
-            'id',
-            'winner',
-            'moves',
-            'updated_at',
-            'created_at',
-        ]
 
 
 class GameViewSet(viewsets.ModelViewSet):
@@ -45,7 +21,7 @@ class GameViewSet(viewsets.ModelViewSet):
 
         obj.move(**request.data)
 
-        if not obj.check_winner():
+        if not obj.check_winner() and obj.has_valid_moves:
             obj.computer_move()
 
         obj.winner = obj.check_winner()
